@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>even and odd Method</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			flex-direction: column;
+		}
+
+		.container{
+			width: 1000px;
+			background-color: #f4f4f4;
+			padding: 20px;
+
+			display: flex;
+		}
+
+		.box{
+			width: 150px;
+			height: 300px;
+
+			margin: 0 20px;
+		}
+
+		.square1{
+			background-color: green;
+		}
+
+		.square2{
+			background-color: orange;
+		}
+
+		.square3{
+			background-color: skyblue;
+		}
+
+		.square4{
+			background-color: yellow;
+		}
+
+		.square5{
+			background-color: brown;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="box square1">Div 1 , Index 0 </div>
+		<hr/>
+		<div class="box square2">Div 2 , Index 1 </div>
+		<hr/>
+		<div class="box square3">Div 3 , Index 2 </div>
+		<hr/>
+		<div class="box square4">Div 4 , Index 3 </div>
+		<hr/>
+		<div class="box square5">Div 5 , Index 4 </div>
+
+	</div>
+
+	<button type="button" id="evenbtn">Even Button</button>
+	<button type="button" id="oddbtn">Odd Button</button>
+	<button type="button" id="slcbtn">Slice Button</button>
+
+
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// They just only count index number
+			// console.log("hi");
+
+			// $("#evenbtn").click(function(){
+
+			// 	$(".box").even().css("background","black");
+
+			// });
+
+			// $("#oddbtn").click(function(){
+
+			// 	$(".box").odd().css("background","black");
+
+			// });
+
+			$("#slcbtn").click(function(){
+
+				// $(".box").slice(1,4).css({
+				// 	"background":"steelblue",
+				// 	"color":"#fff"
+				// })
+
+				// $(".box").slice(0,3).css({
+				// 	"background":"steelblue",
+				// 	"color":"#fff"
+				// })
+
+				$(".box").slice(-4,-1).css({
+					"background":"steelblue",
+					"color":"#fff"
+				})
+
+			});
+
+		});
+
+	</script>
+
+
+</body>
+</html>
