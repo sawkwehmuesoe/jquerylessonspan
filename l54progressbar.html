@@ -67,35 +67,35 @@
 			// console.log("hi");
 
 			$(".btn").click(function(){
-
 				var progressbar = $(".progress-bar");
 				var setwidth = 0;
+				var seturl = "https://www.google.com"
 
-				if(setwidth === 0){
+				var setintv = setInterval(liquid,100);
 
-
-					function liquid(){
-
-						
-
-						if(setwidth >= 100){
-							$(".btn").attr("disabled",true);
-							clearInterval(setintv)
-						}else{
-							setwidth++;
-						 	progressbar.css({
-						 		"width":`${setwidth}%`
-						 	});
-						 	progressbar.text(`${setwidth}%`);
-						}
+				// liquid();
 
 
+				function liquid(){
+					// console.log("i am working");
+
+					
+
+					if(setwidth >= 100){
+						clearInterval(setintv)
+						$(".btn").attr("disabled",true);
+						window.location.href = seturl;
+					}else{
+						setwidth++;
+						progressbar.css({
+							"width":`${setwidth}%`
+						})
+						progressbar.text(`${setwidth}%`);
 					}
-
-					var setintv =  setInterval(liquid,50);
 
 
 				}
+
 
 			});
 
